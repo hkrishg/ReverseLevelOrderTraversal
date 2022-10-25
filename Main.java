@@ -18,13 +18,13 @@ class Main {
 
 
   private static List<List<Integer>> leverOrderTraversal(TreeNode root) {
-    List<List<Integer>> res = new ArrayList<>();
+    List<List<Integer>> res = new LinkedList<>();
     if (root == null)
       return res;
     Queue<TreeNode> queue = new LinkedList<>();
     queue.add(root);
     while (!queue.isEmpty()) {
-      List<Integer> currentLevel = new LinkedList<>();
+      List<Integer> currentLevel = new ArrayList<>();
       int size = queue.size();
       for (int i = 0; i < size; i++) {
         TreeNode currentNode = queue.poll();
